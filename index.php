@@ -32,7 +32,7 @@ $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 
 $tag = $newDom->getElementsByTagName('a');
-echo $newDom->getElementsByClassName('display-label');
+console.log($newDom->getElementsByClassName('display-label'));
 
 /*
 foreach ($temp as $temp1){
