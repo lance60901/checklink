@@ -21,4 +21,20 @@ function check_url($url) {
     return $headers['http_code'];
 }
 //echo $exists;
+
+
+
+$url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/2523";
+
+$page = file_get_contents($url);
+
+$newDom = new DOMDocument();
+@$newDom->loadHTML($page);
+
+$tag = $newDom->getElementsByTagName('a');
+
+foreach ($tag as $tag1) {
+       echo $tag1->getAttribute('href');
+       echo "\n";
+}
 ?>
