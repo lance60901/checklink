@@ -32,11 +32,13 @@ $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 
 $tag = $newDom->getElementsByTagName('a');
-$temp = $newDom->getElementsByClass('display-label');
+echo $newDom->getElementsByClassName('display-label');
 
+/*
 foreach ($temp as $temp1){
     echo $temp1->getAttribute('href');
 }
+*/
 
 foreach ($tag as $tag1) {
        //echo $tag1->getAttribute('href');
