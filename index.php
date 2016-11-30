@@ -32,7 +32,7 @@ $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 
 //$tag = $newDom->getElementsByTagName('a');
-$tag99 = $newDom->getElementsByClassName('html-content');
+$tag99 = $newDom->getElementsByClass('html-content');
 $tag = tag99[0].getElementsByTagName('a');
 
 /*
