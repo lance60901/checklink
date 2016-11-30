@@ -32,9 +32,10 @@ $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 
 $tag = $newDom->getElementsByTagName('a');
+echo $newDom->getElementsByClass('display-label');
 
 foreach ($tag as $tag1) {
-       echo $tag1->getAttribute('href');
-       echo "\n";
+       //echo $tag1->getAttribute('href');
+       //echo "<br>";
 }
 ?>
