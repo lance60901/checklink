@@ -31,8 +31,8 @@ $page = file_get_contents($url);
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 
-//$tag = $newDom->getElementsByTagName('a');
-$tag = $newDom->getElementsByClassName('html-content')[0].getElementsByTagName('a');
+$tag = $newDom->getElementsByTagName('a');
+//$tag = $newDom->getElementsByClassName('html-content')[0].getElementsByTagName('a');
 
 /*
 foreach ($temp as $temp1){
