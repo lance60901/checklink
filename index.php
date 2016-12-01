@@ -48,7 +48,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
             $mainlinkpage = file_get_contents($temp);
             
             //$secDom = new DOMDocument();
-            @$newDom->loadHTML($mainlinkpage);
+            $newDom->loadHTML($mainlinkpage);
             //$finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
             //print("<br>"); 
             //print($finallinks.length);
