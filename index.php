@@ -31,16 +31,18 @@ $page = file_get_contents($url);
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 
-//$tag = $newDom->getElementsByTagName('a');
+$tag = $newDom->getElementsByTagName('a');
 //$tag99 = $newDom->getElementsByID('html-content');
 //$tag = tag99[0].getElementsByTagName('a');
 $tag99 = $newDom->getElementsById('site_header_menu');
 print_r($tag99);
 
+/*
 $classname="html-content";
 $finder = new DomXPath($newDom);
 $spaner = $finder->query("//*[contains(@class, '$classname')]");
 print_r( $spaner);
+*/
 /*
 foreach ($temp as $temp1){
     echo $temp1->getAttribute('href');
