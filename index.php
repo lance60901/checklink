@@ -41,7 +41,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
             //echo file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/3319");
             $yo = file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/3319");
             $newDom->loadHTML(file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/3319"));
-            $finallinks = $newDom->getElementById('site_body_center')->getElementsByTagName('a');
+            //$finallinks = $newDom->getElementById('site_body_center')->getElementsByTagName('a');
             //@$newDom->loadHTML(file_get_contents($temp));
        }
        echo "<br>";
