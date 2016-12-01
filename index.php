@@ -56,10 +56,11 @@ function check_next_level($mainlink){
     //$url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelight";
     //$url_page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($url);
     $mainlinkpage = file_get_contents($mainlink);
-    //print($mainlinkpage);
     $secDom = new DOMDocument();
     @$secDom->loadHTML($mainlinkpage);
     $finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
+    print($finallinks.length);
+    /*
     if($finallinks.length > 0){
         foreach ($finallinks as $finallink) {
            echo "<br>";
@@ -75,6 +76,7 @@ function check_next_level($mainlink){
            echo "<br>";
         }
     }
+    */
 }
 /*
 $tag = $newDom->getElementById('site_body_center')->getElementsByTagName('a');
