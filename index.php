@@ -65,7 +65,7 @@ function check_next_level($mainlink){
             //echo $finallink->nodeValue;
             echo "<br>"; 
             echo $finallink->getAttribute('href');
-            check_url($finallink->getAttribute('href'));
+            //check_url($finallink->getAttribute('href'));
            
            //echo "連線測試結果: ";
             //echo check_url($pagelinks->getAttribute('href'));
