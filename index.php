@@ -27,6 +27,7 @@ function check_url($url) {
 
 $url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelight";
 $page = file_get_contents($url);
+print($page);
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 
