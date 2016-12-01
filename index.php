@@ -42,8 +42,9 @@ foreach ($LinkstoSubpages as $pagelinks) {
        if($pagelinks->getAttribute('href') != "#" && $pagelinks->getAttribute('href') != "/Site/ActivitySidelight"){
             echo $pagelinks->nodeValue;
             echo "<br>"; 
-            echo $pagelinks->getAttribute('href');
-            check_next_level("http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href'));
+            echo "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
+            $temp = "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
+            //check_next_level("http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href'));
            
            //echo "連線測試結果: ";
             //echo check_url($pagelinks->getAttribute('href'));
