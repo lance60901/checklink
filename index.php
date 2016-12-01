@@ -43,7 +43,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
             echo $pagelinks->nodeValue;
             echo "<br>"; 
             echo $pagelinks->getAttribute('href');
-            check_next_level($pagelinks->getAttribute('href'));
+            check_next_level("http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href'));
            
            //echo "連線測試結果: ";
             //echo check_url($pagelinks->getAttribute('href'));
