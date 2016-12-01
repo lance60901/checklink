@@ -1,5 +1,5 @@
 <?php
-
+header("Content-Type:text/html; charset=utf-8");
 /*
 $file = 'www.yahoo.com.tw';
 echo check_url("http://www.ris.gov.tw/701");
