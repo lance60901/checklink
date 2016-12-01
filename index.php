@@ -16,12 +16,12 @@ function check_url($url) {
 
 $url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelight";
 $page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($url);
-//$page2 = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/1941");
+$page2 = file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/311");
 //print($page);
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 $secDom = new DOMDocument();
-//@$secDom->loadHTML($page2);
+@$secDom->loadHTML($page2);
 
 
 echo "<br>";
@@ -55,7 +55,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
        echo "<br>";
 }
 
-@$secDom->loadHTML($page2);
+//@$secDom->loadHTML($page2);
 
 $LinkstoSubpages2 = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
 
