@@ -49,11 +49,12 @@ foreach ($LinkstoSubpages as $pagelinks) {
             
             $secDom = new DOMDocument();
             @$secDom->loadHTML($mainlinkpage);
-            $finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
-            print("<br>"); 
-            print($finallinks.length);
-            print("<br>");
+            //$finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
+            //print("<br>"); 
+            //print($finallinks.length);
+            //print("<br>");
             
+            /*
             if($finallinks.length > 0){
                 foreach ($finallinks as $finallink) {
                    echo "<br>";
@@ -69,7 +70,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
                    echo "<br>";
                 }
             }
-           
+            */
            
             //echo "連線測試結果: ";
             //echo check_url($pagelinks->getAttribute('href'));
