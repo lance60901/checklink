@@ -36,8 +36,8 @@ foreach ($LinkstoSubpages as $pagelinks) {
             echo "<br>"; 
             echo $temp; 
             //check_next_level($temp);
-            $mainlinkpage = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($temp);
-
+            //$mainlinkpage = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($temp);
+            $mainlinkpage = file_get_html($temp);
             
             //$secDom = new DOMDocument();
             //$newDom->loadHTML($mainlinkpage);
