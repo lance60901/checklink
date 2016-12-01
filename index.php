@@ -30,9 +30,12 @@ echo "<br>";
 
 $LinkstoSubpages = $newDom->getElementById('activity_sidelight_center')->getElementsByTagName('a');
 
+$counter = 0;
 
 foreach ($LinkstoSubpages as $pagelinks) {
+       $counter ++;
        echo "<br>";
+       echo $counter."<br>";
        if($pagelinks->getAttribute('href') != "#" && $pagelinks->getAttribute('href') != "/Site/ActivitySidelight"){
             echo $pagelinks->nodeValue;
             echo "<br>"; 
