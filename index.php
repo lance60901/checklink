@@ -34,7 +34,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
             echo "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             $temp = "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             //check_next_level($temp);
-            $mainlinkpage = file_get_contents($temp);
+            //$mainlinkpage = file_get_contents($temp);
             
             //$secDom = new DOMDocument();
             //$newDom->loadHTML($mainlinkpage);
