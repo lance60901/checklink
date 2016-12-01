@@ -36,6 +36,11 @@ $newDom = new DOMDocument();
 //$tag = tag99[0].getElementsByTagName('a');
 $tag99 = $newDom->getElementsById('site_header_menu');
 print_r($tag99);
+
+$classname="html-content";
+$finder = new DomXPath($newDom);
+$spaner = $finder->query("//*[contains(@class, '$classname')]");
+echo $spaner;
 /*
 foreach ($temp as $temp1){
     echo $temp1->getAttribute('href');
