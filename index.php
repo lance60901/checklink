@@ -33,7 +33,7 @@ $LinkstoSubpages = $newDom->getElementById('activity_sidelight_center')->getElem
 $counter = 0;
 
 foreach ($LinkstoSubpages as $pagelinks) {
-       $counter = $counter + `;
+       //$counter = $counter + `;
        //echo "<br>";
        //echo $counter."<br>";
        if($pagelinks->getAttribute('href') != "#" && $pagelinks->getAttribute('href') != "/Site/ActivitySidelight"){
