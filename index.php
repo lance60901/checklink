@@ -3,7 +3,7 @@
 //echo URLIsValid("www.dhjafhksdahfhf.com");
 
 $file = 'www.yahoo.com.tw';
-echo check_url("www.yahoo.com.tw");
+echo check_url("http://www.yahoo.com.tw");
 echo "   ";
 echo check_url("www.dsjksalflknesfsadf.com");
 echo "   ";
