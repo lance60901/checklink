@@ -15,8 +15,8 @@ function check_url($url) {
 }
 
 $url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelight";
-//$page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($url);
-$page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/1941");
+$page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($url);
+$page2 = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/1941");
 //print($page);
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
@@ -28,9 +28,9 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 
-//$LinkstoSubpages = $newDom->getElementById('activity_sidelight_center')->getElementsByTagName('a');
+$LinkstoSubpages = $newDom->getElementById('activity_sidelight_center')->getElementsByTagName('a');
 
-$LinkstoSubpages = $newDom->getElementById('site_body_center')->getElementsByTagName('a');
+$LinkstoSubpages2 = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
 
 foreach ($LinkstoSubpages as $pagelinks) {
        echo "<br>";
@@ -40,7 +40,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
             echo "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             $temp = "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             echo "<br>"; 
-            echo $temp; 
+            //echo $temp; 
             //check_next_level($temp);
             //$mainlinkpage = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($temp);
             //echo file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/3319");
@@ -53,6 +53,17 @@ foreach ($LinkstoSubpages as $pagelinks) {
        }
        echo "<br>";
 }
+
+foreach ($LinkstoSubpages2 as $pagelinks2) {
+       echo "<br>";
+       if($pagelinks2->getAttribute('href') != "#" && $pagelinks2->getAttribute('href') != "/Site/ActivitySidelight"){
+            echo $pagelinks2->nodeValue;
+            echo "<br>"; 
+            echo "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
+       }
+       echo "<br>";
+}
+
 
 function check_next_level($mainlink){
     //echo "<br>".$mainlink;
