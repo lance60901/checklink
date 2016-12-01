@@ -1,13 +1,5 @@
 <?php
 header("Content-Type:text/html; charset=utf-8");
-/*
-$file = 'www.yahoo.com.tw';
-echo check_url("http://www.ris.gov.tw/701");
-echo "   ";
-echo check_url("www.dsjksalflknesfsadf.com");
-echo "   ";
-echo check_url("www.lanceyang.com");
-*/
 
 function check_url($url) {
     echo "<br>Start Checking...<br>";
@@ -21,9 +13,6 @@ function check_url($url) {
 
     return $headers['http_code'];
 }
-//echo $exists;
-
-
 
 $url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelight";
 $page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($url);
@@ -48,7 +37,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
             $mainlinkpage = file_get_contents($temp);
             
             //$secDom = new DOMDocument();
-            $newDom->loadHTML($mainlinkpage);
+            //$newDom->loadHTML($mainlinkpage);
             //$finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
             //print("<br>"); 
             //print($finallinks.length);
