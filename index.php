@@ -22,7 +22,7 @@ $page2 = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 $secDom = new DOMDocument();
-@$secDom->loadHTml();
+@$secDom->loadHTml($page2);
 
 
 echo "<br>";
@@ -45,8 +45,8 @@ foreach ($LinkstoSubpages as $pagelinks) {
             echo file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/3319");
             $yo = file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/3319");
             //$newDom->loadHTML("<html></html>");
-            //$finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
-            echo $secDom->getElementById('site_body_center')->getElementsByTagName('a');
+            $finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
+            echo finallinks;
             //@$newDom->loadHTML(file_get_contents($temp));
        }
        echo "<br>";
