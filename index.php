@@ -34,8 +34,9 @@ $newDom = new DOMDocument();
 $tag = $newDom->getElementsByTagName('a');
 //$tag99 = $newDom->getElementsByID('html-content');
 //$tag = tag99[0].getElementsByTagName('a');
-$tag99 = $newDom->getElementsById('site_header_menu');
+$tag99 = $newDom->getElementById('site_header_menu');
 print_r($tag99);
+print($newDom->getElementById('site_header_menu')->tagName);
 
 /*
 $classname="html-content";
