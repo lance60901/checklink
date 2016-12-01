@@ -43,7 +43,7 @@ echo "<br>";echo "<br>";echo "<br>";
 
 foreach ($tag as $tag1) {
        echo "<br>";
-       if($tag1 != "#"){
+       if($tag1->getAttribute('href') != "#" || $tag1->getAttribute('href') != "/Site/ActivitySidelight"){
             echo $tag1->getAttribute('href');
             echo "連線測試結果: ";
             echo checklink($tag1);
