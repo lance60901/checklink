@@ -44,7 +44,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
             echo "<br>"; 
             echo "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             $temp = "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
-            //check_next_level("http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href'));
+            check_next_level($temp);
            
            //echo "連線測試結果: ";
             //echo check_url($pagelinks->getAttribute('href'));
@@ -60,18 +60,20 @@ function check_next_level($mainlink){
     $secDom = new DOMDocument();
     @$secDom->loadHTML($mainlinkpage);
     $finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
-    foreach ($finallinks as $finallink) {
-       echo "<br>";
-       if($finallink->getAttribute('href') != "#" && $finallink->getAttribute('href') != "/Site/ActivitySidelight"){
-            //echo $finallink->nodeValue;
-            echo "<br>"; 
-            echo $finallink->getAttribute('href');
-            //check_url($finallink->getAttribute('href'));
-           
-           //echo "連線測試結果: ";
-            //echo check_url($pagelinks->getAttribute('href'));
-       }
-       echo "<br>";
+    if($finallinks.length > 0){
+        foreach ($finallinks as $finallink) {
+           echo "<br>";
+           if($finallink->getAttribute('href') != "#" && $finallink->getAttribute('href') != "/Site/ActivitySidelight"){
+                //echo $finallink->nodeValue;
+                echo "<br>"; 
+                echo $finallink->getAttribute('href');
+                //check_url($finallink->getAttribute('href'));
+
+               //echo "連線測試結果: ";
+                //echo check_url($pagelinks->getAttribute('href'));
+           }
+           echo "<br>";
+        }
     }
 }
 /*
