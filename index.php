@@ -8,7 +8,7 @@ echo "   ";
 echo check_url("www.dsjksalflknesfsadf.com");
 echo "   ";
 echo check_url("www.lanceyang.com");
-public function check_url($url) {
+function check_url($url) {
     echo "<br>Start Checking<br>";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
