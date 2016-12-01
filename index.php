@@ -46,7 +46,29 @@ foreach ($LinkstoSubpages as $pagelinks) {
             $temp = "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             //check_next_level($temp);
             $mainlinkpage = file_get_contents($temp);
-            print($mainlinkpage);
+            
+            $secDom = new DOMDocument();
+            @$secDom->loadHTML($mainlinkpage);
+            $finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
+            print("<br>"); 
+            print($finallinks.length);
+            print("<br>");
+            
+            if($finallinks.length > 0){
+                foreach ($finallinks as $finallink) {
+                   echo "<br>";
+                   if($finallink->getAttribute('href') != "#" && $finallink->getAttribute('href') != "/Site/ActivitySidelight"){
+                        //echo $finallink->nodeValue;
+                        echo "<br>"; 
+                        echo $finallink->getAttribute('href');
+                        //check_url($finallink->getAttribute('href'));
+
+                       //echo "連線測試結果: ";
+                        //echo check_url($pagelinks->getAttribute('href'));
+                   }
+                   echo "<br>";
+                }
+            }
            
            
             //echo "連線測試結果: ";
