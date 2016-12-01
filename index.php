@@ -35,7 +35,9 @@ $tag = $newDom->getElementsByTagName('a');
 //$tag99 = $newDom->getElementsByID('html-content');
 //$tag = tag99[0].getElementsByTagName('a');
 $tag99 = $newDom->getElementById('site_header_menu');
+echo "<br>";echo "<br>";
 print_r($tag99);
+echo "<br>";echo "<br>";echo "<br>";
 print($newDom->getElementById('site_header_menu')->tagName);
 
 /*
@@ -51,6 +53,7 @@ foreach ($temp as $temp1){
 */
 
 foreach ($tag as $tag1) {
+       echo "印Tag<br><br><br>";
        echo $tag1->getAttribute('href');
        echo "<br>";
 }
