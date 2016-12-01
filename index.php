@@ -27,7 +27,7 @@ function check_url($url) {
 
 $url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelight";
 $page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($url);
-print($page);
+//print($page);
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 
@@ -55,9 +55,23 @@ function check_next_level($mainlink){
     //$url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelight";
     //$url_page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($url);
     $mainlinkpage = file_get_contents($mainlink);
-    print($mainlinkpage);
+    //print($mainlinkpage);
     $secDom = new DOMDocument();
     @$secDom->loadHTML($mainlinkpage);
+    $finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
+    foreach ($finallinks as $finallink) {
+       echo "<br>";
+       if($finallink->getAttribute('href') != "#" && $finallink->getAttribute('href') != "/Site/ActivitySidelight"){
+            //echo $finallink->nodeValue;
+            echo "<br>"; 
+            echo $finallink->getAttribute('href');
+            check_next_level($finallink->getAttribute('href'));
+           
+           //echo "連線測試結果: ";
+            //echo check_url($pagelinks->getAttribute('href'));
+       }
+       echo "<br>";
+    }
 }
 /*
 $tag = $newDom->getElementById('site_body_center')->getElementsByTagName('a');
