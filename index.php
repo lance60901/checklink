@@ -25,12 +25,10 @@ function check_url($url) {
 
 
 
-$url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/2523";
+$url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelight";
 $page = file_get_contents($url);
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
-
-activity_sidelight_center
 
 echo "<br>";
 echo "<br>";
