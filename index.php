@@ -53,7 +53,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
 }
 
 function check_next_level($mainlink){
-    echo "test";
+    echo "<br>".$mainlink;
     //$mainlinkpage = file_get_contents($mainlink);
     //$secDom = new DOMDocument();
     //@$secDom->loadHTML($mainlinkpage);
