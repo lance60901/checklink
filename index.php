@@ -28,7 +28,9 @@ echo "<br>";
 echo "<br>";
 echo "<br>";
 
-$LinkstoSubpages = $newDom->getElementById('activity_sidelight_center')->getElementsByTagName('a');
+//$LinkstoSubpages = $newDom->getElementById('activity_sidelight_center')->getElementsByTagName('a');
+
+$LinkstoSubpages = $newDom->getElementById('site_body_center')->getElementsByTagName('a');
 
 foreach ($LinkstoSubpages as $pagelinks) {
        echo "<br>";
