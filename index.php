@@ -41,6 +41,8 @@ $LinkstoSubpages = $newDom->getElementById('activity_sidelight_center')->getElem
 foreach ($LinkstoSubpages as $pagelinks) {
        echo "<br>";
        if($pagelinks->getAttribute('href') != "#" && $pagelinks->getAttribute('href') != "/Site/ActivitySidelight"){
+            echo $pagelinks->nodeValue;
+            echo "<br>"; 
             echo $pagelinks->getAttribute('href');
             //echo "連線測試結果: ";
             //echo check_url($pagelinks->getAttribute('href'));
