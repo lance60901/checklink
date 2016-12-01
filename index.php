@@ -31,15 +31,15 @@ $page = file_get_contents($url);
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 
-$tag = $newDom->getElementsByTagName('a');
+//$tag = $newDom->getElementsByTagName('a');
 //$tag99 = $newDom->getElementsByID('html-content');
 //$tag = tag99[0].getElementsByTagName('a');
 $tag99 = $newDom->getElementById('site_header_menu');
 echo "<br>";echo "<br>";
 print_r($tag99);
 echo "<br>";echo "<br>";echo "<br>";
-print($newDom->getElementById('site_header_menu')->tagName);
-
+$tag = $newDom->getElementById('site_header_menu')->nodeValue->getElementsByTagName('a');
+echo "<br>";echo "<br>";echo "<br>";
 /*
 $classname="html-content";
 $finder = new DomXPath($newDom);
