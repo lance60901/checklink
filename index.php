@@ -40,7 +40,7 @@ print_r($tag99);
 $classname="html-content";
 $finder = new DomXPath($newDom);
 $spaner = $finder->query("//*[contains(@class, '$classname')]");
-echo $spaner;
+print_r( $spaner);
 /*
 foreach ($temp as $temp1){
     echo $temp1->getAttribute('href');
