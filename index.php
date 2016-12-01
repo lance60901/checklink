@@ -35,8 +35,7 @@ $newDom = new DOMDocument();
 //$tag99 = $newDom->getElementsByID('html-content');
 //$tag = tag99[0].getElementsByTagName('a');
 $tag99 = $newDom->getElementsById('site_header_menu');
-console.log("test");
-console.log($tag99);
+print_r($tag99);
 /*
 foreach ($temp as $temp1){
     echo $temp1->getAttribute('href');
