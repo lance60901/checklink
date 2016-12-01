@@ -37,35 +37,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
             echo $temp; 
             //check_next_level($temp);
             //$mainlinkpage = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($temp);
-            $mainlinkpage = file_get_html($temp);
-            
-            //$secDom = new DOMDocument();
-            //$newDom->loadHTML($mainlinkpage);
-            //$finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
-            //print("<br>"); 
-            //print($finallinks.length);
-            //print("<br>");
-            
-            /*
-            if($finallinks.length > 0){
-                foreach ($finallinks as $finallink) {
-                   echo "<br>";
-                   if($finallink->getAttribute('href') != "#" && $finallink->getAttribute('href') != "/Site/ActivitySidelight"){
-                        //echo $finallink->nodeValue;
-                        echo "<br>"; 
-                        echo $finallink->getAttribute('href');
-                        //check_url($finallink->getAttribute('href'));
-
-                       //echo "連線測試結果: ";
-                        //echo check_url($pagelinks->getAttribute('href'));
-                   }
-                   echo "<br>";
-                }
-            }
-            */
-           
-            //echo "連線測試結果: ";
-            //echo check_url($pagelinks->getAttribute('href'));
+            echo file_get_contents($temp);
        }
        echo "<br>";
 }
