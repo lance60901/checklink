@@ -53,10 +53,10 @@ foreach ($LinkstoSubpages as $pagelinks) {
 }
 
 function check_next_level($mainlink){
-    echo "<br>".$mainlink;
-    //$mainlinkpage = file_get_contents($mainlink);
-    //$secDom = new DOMDocument();
-    //@$secDom->loadHTML($mainlinkpage);
+    //echo "<br>".$mainlink;
+    $mainlinkpage = file_get_contents($mainlink);
+    $secDom = new DOMDocument();
+    @$secDom->loadHTML($mainlinkpage);
     //$finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
     //print($finallinks.length);
     /*
