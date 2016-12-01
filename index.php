@@ -44,9 +44,12 @@ foreach ($LinkstoSubpages as $pagelinks) {
             echo "<br>"; 
             echo "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             $temp = "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
-            check_next_level($temp);
+            //check_next_level($temp);
+            $mainlinkpage = file_get_contents($temp);
+            print($mainlinkpage);
            
-           //echo "連線測試結果: ";
+           
+            //echo "連線測試結果: ";
             //echo check_url($pagelinks->getAttribute('href'));
        }
        echo "<br>";
