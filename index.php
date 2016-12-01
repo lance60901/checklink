@@ -22,7 +22,7 @@ $page2 = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 $secDom = new DOMDocument();
-@$secDom->loadHTml($page2);
+@$secDom->loadHTML($page2);
 
 
 echo "<br>";
@@ -62,9 +62,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
                    echo "<br>";
                 }
             }
-           
-            //echo $finallinks;
-            //@$newDom->loadHTML(file_get_contents($temp));
+          
        }
        echo "<br>";
 }
