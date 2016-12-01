@@ -38,7 +38,7 @@ $tag99 = $newDom->getElementById('site_header_menu');
 echo "<br>";echo "<br>";
 var_dump($tag99);
 echo "<br>";echo "<br>";echo "<br>";
-$tag = $newDom->getElementById('site_header_menu')->getElementsByTagName('a');
+$tag = $newDom->getElementById('site_body_center')->getElementsByTagName('a');
 echo "<br>";echo "<br>";echo "<br>";
 /*
 $classname="html-content";
