@@ -40,21 +40,14 @@ var_dump($tag99);
 echo "<br>";echo "<br>";echo "<br>";
 $tag = $newDom->getElementById('site_body_center')->getElementsByTagName('a');
 echo "<br>";echo "<br>";echo "<br>";
-/*
-$classname="html-content";
-$finder = new DomXPath($newDom);
-$spaner = $finder->query("//*[contains(@class, '$classname')]");
-print_r( $spaner);
-*/
-/*
-foreach ($temp as $temp1){
-    echo $temp1->getAttribute('href');
-}
-*/
 
 foreach ($tag as $tag1) {
-       echo "印Tag<br><br><br>";
-       echo $tag1->getAttribute('href');
+       echo "<br>";
+       if($tag1 != "#" || $tag1 != "/Site/ActivitySidelight"){
+            echo $tag1->getAttribute('href');
+            echo "連線測試結果: ";
+            echo checklink($tag1);
+       }
        echo "<br>";
 }
 ?>
