@@ -15,8 +15,8 @@ function check_url($url) {
 }
 
 $url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelight";
-$page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($url);
-$page2 = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/3319
+//$page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($url);
+$page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/3319
 ");
 //print($page);
 $newDom = new DOMDocument();
@@ -43,25 +43,11 @@ foreach ($LinkstoSubpages as $pagelinks) {
             //check_next_level($temp);
             //$mainlinkpage = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($temp);
             //echo file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/3319");
-            $yo = file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/3319");
+            //$yo = file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/3319");
             //$newDom->loadHTML("<html></html>");
-            $finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
-            
-           if($finallinks.length > 0){
-                foreach ($finallinks as $finallink) {
-                   echo "<br>";
-                   if($finallink->getAttribute('href') != "#" && $finallink->getAttribute('href') != "/Site/ActivitySidelight"){
-                        //echo $finallink->nodeValue;
-                        echo "<br>"; 
-                        echo $finallink->getAttribute('href');
-                        //check_url($finallink->getAttribute('href'));
-
-                       //echo "連線測試結果: ";
-                        //echo check_url($pagelinks->getAttribute('href'));
-                   }
-                   echo "<br>";
-                }
-            }
+            //$finallinks = $secDom->getElementById('site_body_center')->getElementsByTagName('a');
+           
+           
           
        }
        echo "<br>";
