@@ -32,9 +32,10 @@ $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 
 //$tag = $newDom->getElementsByTagName('a');
-$tag99 = $newDom->getElementsByClass('html-content');
-$tag = tag99[0].getElementsByTagName('a');
-
+//$tag99 = $newDom->getElementsByID('html-content');
+//$tag = tag99[0].getElementsByTagName('a');
+$tag99 = $newDom->getElementsById('site_header_menu');
+echo $tag99;
 /*
 foreach ($temp as $temp1){
     echo $temp1->getAttribute('href');
