@@ -8,8 +8,8 @@ echo "   ";
 echo check_url("www.dsjksalflknesfsadf.com");
 echo "   ";
 echo check_url("www.lanceyang.com");
-function check_url($url) {
-
+public function check_url($url) {
+    echo "<br>Start Checking<br>";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_HEADER, 1);
@@ -46,7 +46,7 @@ foreach ($tag as $tag1) {
        if($tag1->getAttribute('href') != "#" && $tag1->getAttribute('href') != "/Site/ActivitySidelight"){
             echo $tag1->getAttribute('href');
             //echo "連線測試結果: ";
-            //echo checklink($tag1->getAttribute('href'));
+            echo checklink($tag1->getAttribute('href'));
        }
        echo "<br>";
 }
