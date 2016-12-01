@@ -46,7 +46,7 @@ foreach ($tag as $tag1) {
        if($tag1->getAttribute('href') != "#" && $tag1->getAttribute('href') != "/Site/ActivitySidelight"){
             echo $tag1->getAttribute('href');
             //echo "連線測試結果: ";
-            echo checklink($tag1->getAttribute('href'));
+            echo check_url($tag1->getAttribute('href'));
        }
        echo "<br>";
 }
