@@ -20,6 +20,7 @@ $page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.f
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
 
+
 echo "<br>";
 echo "<br>";
 echo "<br>";
@@ -37,8 +38,9 @@ foreach ($LinkstoSubpages as $pagelinks) {
             echo $temp; 
             //check_next_level($temp);
             //$mainlinkpage = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($temp);
-            //echo file_get_contents($temp);
-            @$newDom->loadHTML(file_get_contents($temp));
+            echo file_get_contents($temp);
+            @$newDom->loadHTML("<html></html>");
+            //@$newDom->loadHTML(file_get_contents($temp));
        }
        echo "<br>";
 }
