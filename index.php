@@ -43,6 +43,9 @@ foreach ($LinkstoSubpages as $pagelinks) {
             $temp = "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             echo "<br>";
             ${"newDom$counter"} = new DOMDocument();
+            ${"page$counter"} = file_get_contents($temp);
+            //@${"newDom$counter"}->loadHTML(${"page$counter"});
+            
             //testfunc($temp);
             //$page2 = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($temp);
            
