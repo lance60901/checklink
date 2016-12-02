@@ -16,7 +16,8 @@ function check_url($url) {
 
 $url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelight";
 $page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($url);
-$page2 = file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/311");
+//$page2 = file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/311");
+$url3 = "http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/311";
 //print($page);
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
@@ -36,7 +37,7 @@ for ($i = 1; $i <= 3; $i++) {
     echo $i;
     ${"newDom$counter"} = new DOMDocument();
             
-    ${"page$counter"} = file_get_contents($page2);
+    ${"page$counter"} = file_get_contents($url3);
     print ${"page$counter"};
     @${"newDom$counter"}->loadHTML(${"page$counter"});
 }
