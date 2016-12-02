@@ -37,8 +37,8 @@ for ($i = 1; $i <= 3; $i++) {
     ${"newDom$counter"} = new DOMDocument();
             
     ${"page$counter"} = file_get_contents($page2);
-    echo ${"page$counter"};
-    //@${"newDom$counter"}->loadHTML(${"page$counter"});
+    print ${"page$counter"};
+    @${"newDom$counter"}->loadHTML(${"page$counter"});
 }
 
 foreach ($LinkstoSubpages as $pagelinks) {
