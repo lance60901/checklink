@@ -1,4 +1,5 @@
 <?php
+set_time_limit(1000);
 header("Content-Type:text/html; charset=utf-8");
 
 function check_url($url) {
