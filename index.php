@@ -75,7 +75,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
        }
        echo "<br>";
         
-       if($counter == 29)
+       if($counter == 30)
            break;
 }
 
