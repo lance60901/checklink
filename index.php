@@ -55,7 +55,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
             echo "<br>";
             ${"newDom$counter"} = new DOMDocument();
             
-            ${"page$counter"} = file_get_contents($url3);
+            ${"page$counter"} = file_get_contents($temp);
             @${"newDom$counter"}->loadHTML(${"page$counter"});
             
             //testfunc($temp);
