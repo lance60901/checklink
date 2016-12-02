@@ -38,7 +38,7 @@ for ($i = 1; $i <= 3; $i++) {
     ${"newDom$counter"} = new DOMDocument();
             
     ${"page$counter"} = file_get_contents($url3);
-    print ${"page$counter"};
+    //print ${"page$counter"};
     @${"newDom$counter"}->loadHTML(${"page$counter"});
 }
 
@@ -46,6 +46,8 @@ foreach ($LinkstoSubpages as $pagelinks) {
        $counter++;
        echo "<br>";
        echo $counter."<br>";
+       if($counter == 3)
+           break;
        if($pagelinks->getAttribute('href') != "#" && $pagelinks->getAttribute('href') != "/Site/ActivitySidelight"){
             echo $pagelinks->nodeValue;
             echo "<br>"; 
