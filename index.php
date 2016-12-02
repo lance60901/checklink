@@ -56,7 +56,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
             ${"newDom$counter"} = new DOMDocument();
             
             ${"page$counter"} = file_get_contents($temp);
-            print (${"page$counter"});
+            //print (${"page$counter"});
             @${"newDom$counter"}->loadHTML(${"page$counter"});
             
             //testfunc($temp);
@@ -75,7 +75,7 @@ foreach ($LinkstoSubpages as $pagelinks) {
        }
        echo "<br>";
         
-       if($counter == 10)
+       if($counter == 15)
            break;
 }
 
