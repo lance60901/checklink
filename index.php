@@ -35,29 +35,28 @@ $counter = 0;
 
 for ($i = 1; $i <= 3; $i++) {
     echo $i;
-    ${"newDom$counter"} = new DOMDocument();
+    //${"newDom$counter"} = new DOMDocument();
             
-    ${"page$counter"} = file_get_contents($url3);
+    //${"page$counter"} = file_get_contents($url3);
     //print ${"page$counter"};
-    @${"newDom$counter"}->loadHTML(${"page$counter"});
+    //@${"newDom$counter"}->loadHTML(${"page$counter"});
 }
 
 foreach ($LinkstoSubpages as $pagelinks) {
        $counter++;
        echo "<br>";
        echo $counter."<br>";
-       if($counter == 3)
-           break;
+       
        if($pagelinks->getAttribute('href') != "#" && $pagelinks->getAttribute('href') != "/Site/ActivitySidelight"){
             echo $pagelinks->nodeValue;
             echo "<br>"; 
             echo "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             $temp = "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             echo "<br>";
-            //${"newDom$counter"} = new DOMDocument();
+            ${"newDom$counter"} = new DOMDocument();
             
-            //${"page$counter"} = file_get_contents($temp);
-            //@${"newDom$counter"}->loadHTML(${"page$counter"});
+            ${"page$counter"} = file_get_contents($url3);
+            @${"newDom$counter"}->loadHTML(${"page$counter"});
             
             //testfunc($temp);
             //$page2 = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($temp);
@@ -74,6 +73,9 @@ foreach ($LinkstoSubpages as $pagelinks) {
           
        }
        echo "<br>";
+        
+       if($counter == 3)
+           break;
 }
 
 function testfunc($temp){
