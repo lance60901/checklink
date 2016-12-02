@@ -16,7 +16,7 @@ function check_url($url) {
 
 $url="http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelight";
 $page = '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>'.file_get_contents($url);
-//$page2 = file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/311");
+$page2 = file_get_contents("http://www.luzhou.ris.ca.ntpc.gov.tw/Site/ActivitySidelightDetial/311");
 //print($page);
 $newDom = new DOMDocument();
 @$newDom->loadHTML($page);
@@ -32,6 +32,15 @@ $LinkstoSubpages = $newDom->getElementById('activity_sidelight_center')->getElem
 
 $counter = 0;
 
+for ($i = 1; $i <= 3; $i++) {
+    echo $i;
+    ${"newDom$counter"} = new DOMDocument();
+            
+    ${"page$counter"} = file_get_contents($page2);
+    echo ${"page$counter"};
+    //@${"newDom$counter"}->loadHTML(${"page$counter"});
+}
+
 foreach ($LinkstoSubpages as $pagelinks) {
        $counter++;
        echo "<br>";
@@ -42,8 +51,9 @@ foreach ($LinkstoSubpages as $pagelinks) {
             echo "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             $temp = "http://www.luzhou.ris.ca.ntpc.gov.tw".$pagelinks->getAttribute('href');
             echo "<br>";
-            ${"newDom$counter"} = new DOMDocument();
-            ${"page$counter"} = file_get_contents($temp);
+            //${"newDom$counter"} = new DOMDocument();
+            
+            //${"page$counter"} = file_get_contents($temp);
             //@${"newDom$counter"}->loadHTML(${"page$counter"});
             
             //testfunc($temp);
